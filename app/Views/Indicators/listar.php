@@ -172,7 +172,10 @@
   tippy('#idGmail', {
     content: 'Contáctar por correo',
   });
+  /* FIN modulos Tippy */
 
+
+  /* Función que genera los graficos  */
   let chartUF;
 
   const dibujarGrafico = (idBotonLi, indicador, idChart) => {
@@ -215,7 +218,9 @@
     });
 
   }
+  /* Fin */
 
+  /* Eventos del DOM - Botones TAB */
   document.addEventListener("DOMContentLoaded", function(event) {
 
     const $botonUF = document.querySelectorAll('#ulPadre li')[0];
@@ -366,7 +371,10 @@
 
     });
   })
+  /* FIN */
 
+
+  /* Eliminar un registro */
   const eliminarFila = (id) => {
 
     Swal.fire({
@@ -410,7 +418,9 @@
     })
 
   }
+  /* FIN */
 
+  /* Obtener datos de la fila */
   const getData = (id) => {
 
     $.post('<?= base_url() ?>/IndicadoresController/getFila', {
@@ -428,8 +438,10 @@
 
     });
   }
+  /* FIN */
 
 
+  /* Editar el registro */
   const editarFila = (id) => {
 
     const $fecha = document.querySelector('#fecha').value;
@@ -483,4 +495,5 @@
     })
 
   }
+  /* FIN */
 </script>
